@@ -1,0 +1,83 @@
+<html>
+   <head>
+       <script src="formChecker.js"></script>
+       <link rel="stylesheet" type="text/css" href="style.css">
+   </head>
+<body>
+
+    <form action="customerBackend.php" id="customer" method="post">
+    <table>
+    <tr>
+    <td>
+
+
+    Username:<br>
+    <input type="text" name="username"><br><br>
+    Password:<br>
+    <input type="text" name="password"><br>
+
+    <br><br><br>
+
+
+
+
+    <h4>Purchase:</h4>
+
+    <!-- I used information from here to figure out the range inputs: http://thenewcode.com/757/Playing-With-The-HTML5-range-Slider-Input -->
+    # of Apples - $1.00 each<br>
+    <input type="range" name="apples" id="apples"
+
+        min="0" max="100" value="0"
+
+        oninput="document.getElementById('apples_info').value=value">
+
+    <output for="apples" id="apples_info">0</output><br><br>
+
+
+    # of Bananas - $0.50 each<br>
+    <input type="range" name="bananas" id="bananas"
+
+        min="0" max="100" value="0"
+
+        oninput="document.getElementById('bananas_info').value=value">
+
+    <output for="bananas" id="bananas_info">0</output><br><br>
+
+
+    # of Pineapples - $3.00 each<br>
+    <input type="range" name="pineapples" id="pineapples"
+
+        min="0" max="100" value="0"
+
+        oninput="document.getElementById('pineapples_info').value=value">
+
+    <output for="pineapples" id="pineapples_info">0</output><br><br>
+    </td>
+
+    <td>
+
+        <img src="Jerry.jpg"><br><br>
+
+    </td>
+
+    <td>
+    <h4>Shipping:</h4>
+    7 day - Free<input type="radio" name="shipping" value="Free"><br>
+    Over Night Express - $50.00<input type="radio" name="shipping" value="Express"><br>
+    Three-Day - $5.00 <input type="radio" name="shipping" value="Three-Day"><br>
+
+    <br><br><br>
+
+
+
+    <input type="reset" value="Reset"><br><br>
+    <input type="submit" value="Submit" onclick="return checkForm()">
+    </td>
+
+
+    </tr>
+    </table>
+
+    </form>
+</body>
+</html>

@@ -12,9 +12,18 @@ $user = array($name,$quest,$color,$capital,$speed);
 
 $answers = array("King Arthur","To seek the Holy Grail.","Blue","Aššur","African or European swallow?");
 
-for($x=0;$x<5;x++){
-    echo "Question ". $x+1 . ": " . $questions[$x] . "<br>";
+$points = 0;
+
+for($x=0;$x<5;$x++){
+    echo "Question ". ($x+1) . ": " . $questions[$x] . "<br><br>";
     echo "You answered: " . $user[$x] . "<br>";
-    echo "Correct answer: " . $answers[$x] . "<br>";
+    echo "Correct answer: " . $answers[$x] . "<br><br><br>";
+    if($user[$x] == $answers[$x]){
+        $points = $points + 1;
+    }
 }
+
+echo "<br>";
+echo "Correct: " . $points . "<br>";
+echo "Percent: " . (100*$points/5) . "%";
 ?>
