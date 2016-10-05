@@ -3,6 +3,14 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+
+    <?php
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+
+        echo "Username: ".$username . "<br>";
+        echo "Password: ".$password. "<br>";
+     ?>
     <table>
     <tr>
         <th></th>
@@ -61,6 +69,7 @@
         $total = $apples + $bananas*0.5 + $pineapples*3 + $cost;
         echo "<td>$" . money_format('%(#2n', $total) . "</td>";
         echo "</tr>";
+
     ?>
 
     <table>
